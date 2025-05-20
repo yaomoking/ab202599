@@ -131,7 +131,81 @@
               console.error(`留言讀取失敗 [${index}]:`, err);
             });
         }
+  <!-- Modal: 服務特色 -->
+  <div class="modal fade" id="modalFeature" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-4">
+        <div class="modal-header">
+          <h5 class="modal-title">服務特色</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>❤️ 安寶外送茶 專注於提供高質素的外送茶服務，服務範圍涵蓋雙北、宜蘭、桃園、基隆等地區。</p>
+          <ul class="list-unstyled">
+            <li>✨ <strong>專業小姐：</strong> 擁有豐富經驗的小姐，提供溫柔體貼的服務。</li>
+            <li>💖 <strong>高配合度：</strong> 依客需量身訂製服務流程，確保體驗。</li>
+            <li>🔒 <strong>安全可靠：</strong> 嚴守隱私與預約制度，保護雙方權益。</li>
+            <li>⏰ <strong>彈性預約：</strong> 根據時間地點需求，靈活安排時段。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <!-- Modal: 安寶服務介紹 -->
+  <div class="modal fade" id="modalIntro" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content p-4">
+        <div class="modal-header">
+          <h5 class="modal-title">安寶服務介紹</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h6>👤 適合的客戶</h6>
+          <p>我們歡迎人品良好、尊重他人、無暴力傾向、不情緒化且守規矩的客人。</p>
+          <ul>
+            <li>✅ 尊重與溝通：遇事理性處理，杜絕情緒化行為</li>
+            <li>✅ 守規則：不偷拍、不私聯、不侵擾隱私</li>
+            <li>✅ 誠信配合：如有毀約或詐騙行為，永久封鎖</li>
+          </ul>
+          <hr>
+          <h6>💖 我們能提供的服務</h6>
+          <ul>
+            <li>📷 品質保證：照片真實、配對嚴選，杜絕「約A來B」</li>
+            <li>🧠 高效客服：處理迅速，提供客製化服務</li>
+            <li>📍 靈活安排：可依需求安排地點與時段</li>
+            <li>🏠 住宿服務：可安排北中南區域旅館與住家</li>
+            <li>🫱 熟客福利：享有更多貼心交流與深度互動</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 粉紅氣泡動畫 -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const bubbleContainer = document.createElement('div');
+      bubbleContainer.className = 'bubble-container';
+      document.body.appendChild(bubbleContainer);
+
+      function createBubble() {
+        const bubble = document.createElement('div');
+        bubble.className = 'bubble';
+        bubble.style.left = Math.random() * 100 + 'vw';
+        bubble.style.animationDuration = (4 + Math.random() * 3) + 's';
+        bubble.style.width = bubble.style.height = (10 + Math.random() * 20) + 'px';
+        bubbleContainer.appendChild(bubble);
+
+        setTimeout(() => {
+          bubble.remove();
+        }, 7000);
+      }
+
+      setInterval(createBubble, 500);
+    });
+  </script>
+        
         card.appendChild(img);
         card.appendChild(commentDiv);
         col.appendChild(card);

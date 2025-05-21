@@ -52,8 +52,8 @@ function createNavBar() {
     const regions = [
         { name: '❤️ 雙北 選妃', href: 'north.html' },
         { name: '❤️ 桃園・新竹 選妃', href: 'hml.html' },
-        { name: '❤️ 臺中・彰化・南投 選妃', href: 'central.html' },
-        { name: '❤️ 高雄・臺南・選妃', href: 'south.html' }
+        { name: '❤️ 臺中・彰化 選妃', href: 'central.html' },
+        { name: '❤️ 高雄・臺南選妃', href: 'south.html' }
     ];
 
     regions.forEach(region => {
